@@ -1,0 +1,13 @@
+{
+    "usuarios":[
+        {
+            "id":1,
+            "apellido_paterno": "martinez",
+            "apellido_materno": "roberto",
+            "nombre": "aldrin",
+            "username": "Aroberto",
+            "password": "12345"
+        }
+    ]
+
+}

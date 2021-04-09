@@ -1,0 +1,98 @@
+.registrar{
+    width : 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: auto;
+}
+
+.registrar form{
+    width : 90%;
+    height: 90%;
+     
+    display: flex;    
+    overflow: auto;
+}
+.registrar form .campos{
+    width : 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-around;    
+}
+/* Campos - input y select */
+.registrar form .campos .textbox, .dropdown{
+    width: 90%;
+    margin-bottom: .5em;
+}
+.registrar form .campos .textbox:last-child{
+    margin-bottom: 0px;
+}
+
+/* Campo - textarea - descripction */
+.registrar form .campos .text-descr{
+    width: 90%;
+}
+.registrar form .campos .text-descr h2{
+    margin: 0 0 0.5em 0;
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.registrar form .campos .btn-aceptar{
+    width : 60%;
+    margin: 0em 0 0.5em 0;
+}
+
+/* Modal - QR */
+.modal{
+    width : 90%;
+    height: 90%;
+    
+
+    position : fixed;
+     transform: translateY(-200%);
+    visibility: hidden;
+
+    background: #ececec;
+    transition: 700ms ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction : column;
+}
+.modal.active{
+    transform: translateY(0%);
+    visibility: visible;
+}
+.modal .btn-cerrar{
+    width: 50%;
+}
+
+
+
+
+/* Mobiles */ 
+@media screen and (max-width: 450px){
+    .registrar form{
+        flex-direction: column;
+    }
+    .registrar form .qrcode-box{
+        width: 100%;
+    }
+}
+
+/* Laptops - Tv */
+@media screen and (min-width: 1000px){
+    .registrar form, .modal{
+        width : 40%;
+        
+    }
+}

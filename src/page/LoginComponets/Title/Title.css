@@ -1,0 +1,8 @@
+.title-container label{
+    color: mintcream;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

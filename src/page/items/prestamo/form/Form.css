@@ -1,0 +1,110 @@
+.formulario-prestamo{   
+    background:  #fafafa; 
+    width :  90%;
+    height: 100%;
+
+    overflow: auto;
+    box-shadow: 0px 1px 5px 0px rgba(185, 185, 185, 0.75);
+    
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    position: relative;
+
+}
+
+.formulario-prestamo .fields,
+.formulario-prestamo .btn-aceptar{
+    width: 90%
+}
+/* Títulos */
+.formulario-prestamo .fields h3{
+    margin: 0em;
+    font-size: clamp(12px, 3.5vw, .9rem);
+}
+.formulario-prestamo .fields .input-title{
+    font-size: clamp(13px, 2vw, .8rem);
+}
+
+/* Escaner - Qr */
+.scanner-container{
+    width : 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 100;
+    transform: translateX(-150%);
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.scanner-container.active{
+    transform: translateX(0);
+}
+/*
+   ### Responsive design ###
+
+/* FOR MOBILES  less than 450px Celulares pequeños */
+@media screen and (max-width: 450px){
+    
+    .formulario-prestamo{
+        margin: auto;
+        width : 90%;
+        height: 95%;
+
+        display: block;
+    }
+
+    .formulario-prestamo .fields, .btn-aceptar{ 
+        margin-left : auto;
+        margin-right: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+/* FOR MOBILES - Landscape */
+@media screen and (orientation: landscape) and (max-height: 450px){
+    .formulario-prestamo{
+        display: block;
+    }
+    .formulario-prestamo .fields, .btn-aceptar{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: .5em;
+    }
+}
+
+
+/* FOR DESKTOPS */
+@media screen and (min-width: 1000px){
+    .formulario-prestamo{
+        width: 50%;
+    }
+}
+
+/* FOR some DESKTOPS 1300px and 800px */
+@media screen and (min-width: 1300px) and (max-height: 800px){
+    .formulario-prestamo{
+        width: 40%;
+    }
+    .ubicacion-field{
+        display: flex;
+        justify-content: space-between;
+
+        margin: 1em 0 0 0;
+        position: relative;        
+    }
+    .ubicacion-field h3{
+        position: absolute;
+        top: -30%;
+    }
+}

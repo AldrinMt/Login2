@@ -1,0 +1,99 @@
+.inpuText{
+    width: 100%;
+    display: flex;
+
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    margin-bottom: 1em;
+}
+.inpuText:last-child{
+    margin-bottom: 0;
+}
+
+.inpuText input{    
+    width : inherit;
+    height: clamp(2.1em, 5vw, 2.5em);    
+
+    font-size: clamp(11px, 100vw, .9rem);
+    font-family: inherit;
+    
+    padding-left: 10px;
+
+    border: 2px solid #D6DBDF;    
+    border-radius: 5px ;
+    outline-style: none;
+
+    color: tomato;    
+    transition: 1s;
+}
+
+.inpuText label{
+    transition: 200ms;
+    font-size: clamp(12px, 4vw, 1rem);
+
+    position: absolute;
+    left: 10px;
+    top: clamp(20%,  1vw, 25%);
+    color: #9aa4a5;
+}
+
+/* *** Efectos - para PC's  *** */
+.inpuText input:focus,
+.inpuText input:hover{
+    border: 2px solid #48426d;    
+    color: #373546;
+}
+
+.inpuText input:hover ~ label,
+.inpuText input:focus ~ label{
+    color: #1C2833;
+    
+}
+.inpuText input:hover ~  label,
+.inpuText input:valid ~  label{
+    top: min(1vw, -25%); /*  CHECAR  */
+    background: white;
+    font-size: clamp(11px, 1vw, .9rem);   
+}
+
+/* En caso de que el "input" sea DATE */
+.inpuText.date input{
+    font-size: clamp(11px, 100vw, .9rem);       
+}
+.inpuText.date label{
+    top: min(1vw, -25%);
+    font-size: clamp(11px, 1vw, .9rem); 
+    background: white;
+}
+
+
+/* 
+    For Desktops 1200px
+*/
+@media screen and (min-width: 1200px){
+
+
+    .inpuText:last-child label{
+        top: clamp(20%,  1vw, 20%);
+    }
+    /* Mantener espacios entre Cajas en fila */
+    .inpuText:first-child{
+        margin-right: 5px;
+    }
+    .inpuText.date:last-child{
+        margin-left: 5px;
+    }
+    /* ***** */
+    .inpuText.date:first-child{
+        margin-left: 0;
+    }
+    .inpuText.date:last-child label{
+        top:-18%;
+    }
+    .inpuText:last-child input:hover ~ label,
+    .inpuText:last-child input:valid ~ label{
+        top: -18%;
+        
+    }
+}

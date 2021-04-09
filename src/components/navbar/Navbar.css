@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap');
+
+.navbar-menu{
+    width: 100%;
+    height: 6%;
+
+    position: sticky;
+    top:0;
+    
+    display: flex;
+    /* background: #ececec; */
+    background: white;
+    box-shadow: 0px 1px 5px -5px #ccc9c9;
+
+
+}
+
+/* Caja 1 - Menú Icon */
+.navbar-menu .boxBar{
+    width: 3em;
+
+    display: flex;
+    justify-content: center;
+}
+.navbar-menu .boxBar span{
+    font-size : clamp(10px, 7vw, 1.2rem);
+    align-self: center;
+
+    color: #233342;
+    line-height: 0;
+    cursor: pointer;
+}
+
+/* Caja 2 - Título */
+.navbar-menu .schoolName{
+    color: #30455c;
+    font-size: clamp(12px, 8vw, 2.2rem);
+    font-family: 'Poppins', sans-serif;
+    
+    align-self: center;
+    margin-left: .2em;
+    text-transform: capitalize;
+}
+
+/* *** For Mobile phones ( more than - 400px)  *** */
+
+@media screen and (min-width: 400px){
+    .navbar-menu .boxBar{
+        width: 5em;
+    }
+}
+/* *** For Mobile phones ( Landscape ) *** */
+@media only screen and (orientation: landscape) and (max-height: 600px){
+    .navbar-menu .boxBar span{
+        font-size: clamp(12px, 7vh, 1.2rem);
+    }
+    .navbar-menu .schoolName{
+        font-size: clamp(12px, 8vh, 2.2rem);
+    }
+}

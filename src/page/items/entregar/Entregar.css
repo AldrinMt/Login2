@@ -1,0 +1,143 @@
+.entregar{
+    width : 95%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: sans-serif;
+}
+
+.box-img{
+    width : 30%;
+    height: auto;
+
+    background: rgb(138, 35, 35);
+}
+.box-img img{
+    width : 100%;
+    height: auto;
+}
+/* Botón principal - entregar*/
+.btn-entregar{
+    width:  90%;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+.btn-entregar button{
+    
+    width : 12em;
+    height: 3em;
+    cursor: pointer;
+
+    border: 0;
+
+    padding: 0;
+    outline: none;
+
+    box-shadow: 0px 1px 5px 0px rgba(116, 150, 243, 0.35);
+    font-size: 1.1rem;
+
+    display: flex;
+
+    transition: 300ms;
+}
+
+.btn-escanear{
+    width : 12em;
+    height: auto;
+}
+
+/* Formulario - info QrCode */
+.entregar form{
+    width : 90%;
+    height: 80%;
+
+    position: fixed;
+    transform: translateX(-300%);
+    transition: 400ms ease-in-out;
+
+    background: #f4f6f6;
+    box-shadow: 0px 1px 5px 0px rgba(185, 185, 185, 0.45);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.entregar form.active{
+    transform: translateX(0);
+}
+
+
+.entregar form h1{
+    width : 100%;
+    margin: 0;
+    /* color : #30455c;*/
+    color: rgb(255, 255, 255);
+
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(0, 0, 0, 0.3);
+}
+
+.entregar form .input-box{
+    width: 80%;
+    height: auto;
+}
+/* Placeholder - títulos de los input-box */
+.entregar form .input-box .input-title{
+    color: #797d7f;
+
+    font-size  : 12.5px;
+    font-family: 'Poppins', sans-serif;    
+}
+
+
+.entregar form .btn-entregar{
+    width: 60%;
+    height: auto;
+
+    background: cornflowerblue;
+
+    display: flex; 
+    flex-direction: column;
+}
+
+.entregar form .myBtn-entregar{
+    width: 60%;
+}
+
+/* ### Mobiles ### */
+@media screen and (orientation:landscape) and (max-height:450px){
+    .entregar form{
+        display: block;
+        overflow: auto;
+    }
+    .entregar form  .input-box,
+    .entregar form .myBtn-entregar{
+        margin-left : auto;
+        margin-right: auto;
+    }
+    .entregar form .myBtn-entregar{
+        margin-top   : 10px;
+        margin-bottom: 10px;
+    }
+}
+/* ### Tablets ### */
+@media screen and (min-width: 600px){
+    .entregar form{
+        width: 75%;
+    }
+}
+/* ### Desktops ### */
+@media screen and (min-width: 1200px){
+    .entregar form{
+        width: 30%;
+    }
+}
